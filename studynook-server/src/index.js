@@ -46,7 +46,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 const path = require('path');
-const distPath = path.join(__dirname, '../../studynook-client/dist');
+const distPath = process.env.VERCEL
+  ? path.join(process.cwd(), 'studynook-client/dist')
+  : path.join(__dirname, '../../studynook-client/dist');
 
 // Serve static assets
 app.use(express.static(distPath));

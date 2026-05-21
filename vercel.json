@@ -5,7 +5,7 @@
       "src": "studynook-server/src/index.js",
       "use": "@vercel/node",
       "config": {
-        "includeFiles": ["studynook-client/dist/**"]
+        "includeFiles": ["studynook-server/public/**"]
       }
     }
   ],

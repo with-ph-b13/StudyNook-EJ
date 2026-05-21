@@ -46,15 +46,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 const path = require('path');
-const fs = require('fs');
-const distPath = (() => {
-  const candidates = [
-    path.join(__dirname, '../../studynook-client/dist'),
-    path.join(process.cwd(), 'studynook-client/dist'),
-    path.join(__dirname, '../studynook-client/dist'),
-  ];
-  return candidates.find(p => fs.existsSync(p)) || candidates[0];
-})();
+const distPath = path.join(__dirname, '../public');
 
 // Serve static assets
 app.use(express.static(distPath));

@@ -93,7 +93,7 @@ const Home = () => {
             <Spinner size="large" />
           </div>
         ) : latestRooms.length === 0 ? (
-          <div className="text-center py-20 bg-white dark:bg-slate-850 rounded-2xl shadow-sm border border-slate-200/50 dark:border-slate-800/50 p-8">
+          <div className="text-center py-20 bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-200/50 dark:border-slate-800/50 p-8">
             <p className="text-slate-500 dark:text-slate-400">No rooms listed yet. Be the first to add one!</p>
             <Link
               to="/add-room"

@@ -235,7 +235,7 @@ const MyBookings = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-center justify-between pt-3 border-t border-slate-100 dark:border-slate-850">
+                  <div className="flex items-center justify-between pt-3 border-t border-slate-100 dark:border-slate-800">
                     <span
                       className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider ${
                         booking.status === 'confirmed'

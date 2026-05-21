@@ -1,14 +1,21 @@
 {
   "version": 2,
-  "functions": {
-    "studynook-server/src/index.js": {
-      "includeFiles": "studynook-client/dist/**"
-    }
-  },
-  "routes": [
+  "builds": [
     {
-      "src": "/(.*)",
-      "dest": "studynook-server/src/index.js"
+      "src": "studynook-client/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    },
+    {
+      "src": "studynook-server/src/index.js",
+      "use": "@vercel/node"
     }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "studynook-server/src/index.js" },
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "studynook-client/index.html" }
   ]
 }

@@ -46,9 +46,15 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 const path = require('path');
-const distPath = process.env.VERCEL
-  ? path.join(process.cwd(), 'studynook-client/dist')
-  : path.join(__dirname, '../../studynook-client/dist');
+const fs = require('fs');
+const distPath = (() => {
+  const candidates = [
+    path.join(__dirname, '../../studynook-client/dist'),
+    path.join(process.cwd(), 'studynook-client/dist'),
+    path.join(__dirname, '../studynook-client/dist'),
+  ];
+  return candidates.find(p => fs.existsSync(p)) || candidates[0];
+})();
 
 // Serve static assets
 app.use(express.static(distPath));

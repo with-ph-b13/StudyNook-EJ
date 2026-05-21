@@ -268,12 +268,12 @@ const Home = () => {
           </div>
 
           {/* Decorative Visual Grid */}
-          <div className="grid grid-cols-2 gap-4 relative">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 relative">
             <div className="absolute inset-0 bg-indigo-600/5 rounded-3xl filter blur-xl" />
             <img
               src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=300&q=80"
               alt="Library interior study spot"
-              className="rounded-2xl object-cover w-full h-48 sm:h-64 shadow-md mt-8"
+              className="rounded-2xl object-cover w-full h-48 sm:h-64 shadow-md sm:mt-8"
             />
             <img
               src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=300&q=80"

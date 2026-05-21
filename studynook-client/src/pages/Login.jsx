@@ -50,7 +50,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-[85vh] flex items-center justify-center bg-slate-50 dark:bg-slate-900 transition-colors duration-300 font-sans px-4">
+    <div className="min-h-[85vh] flex items-center justify-center bg-slate-50 dark:bg-slate-900 transition-colors duration-300 font-sans px-4 py-12">
       <motion.div
         initial={{ y: 30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}

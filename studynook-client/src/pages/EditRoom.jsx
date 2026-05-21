@@ -146,7 +146,7 @@ const EditRoom = () => {
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Room name */}
-              <div className="space-y-1.5 col-span-2">
+              <div className="space-y-1.5 md:col-span-2">
                 <label className="text-xs font-bold uppercase tracking-wider text-slate-400">Room Name</label>
                 <div className="relative">
                   <input
@@ -162,7 +162,7 @@ const EditRoom = () => {
               </div>
 
               {/* Description */}
-              <div className="space-y-1.5 col-span-2">
+              <div className="space-y-1.5 md:col-span-2">
                 <label className="text-xs font-bold uppercase tracking-wider text-slate-400">Description</label>
                 <div className="relative">
                   <textarea
@@ -179,7 +179,7 @@ const EditRoom = () => {
               </div>
 
               {/* Image URL */}
-              <div className="space-y-1.5 col-span-2">
+              <div className="space-y-1.5 md:col-span-2">
                 <label className="text-xs font-bold uppercase tracking-wider text-slate-400">Image URL</label>
                 <div className="relative">
                   <input
